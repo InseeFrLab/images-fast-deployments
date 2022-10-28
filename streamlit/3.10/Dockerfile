@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install -y \
 USER appuser
 WORKDIR /home/appuser
 
-RUN git clone https://github.com/streamlit/streamlit-example.git app
+#here we will use an init side car to pull a public or pirvate repository in /home/appuser/app
+#RUN git clone https://github.com/streamlit/streamlit-example.git app
 
 ENV VIRTUAL_ENV=/home/appuser/venv
 RUN virtualenv ${VIRTUAL_ENV}
