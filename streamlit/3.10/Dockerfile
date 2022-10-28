@@ -19,9 +19,10 @@ WORKDIR /home/appuser
 #RUN git clone https://github.com/streamlit/streamlit-example.git app
 
 ENV VIRTUAL_ENV=/home/appuser/venv
-RUN virtualenv ${VIRTUAL_ENV}
-RUN . ${VIRTUAL_ENV}/bin/activate && pip install -r app/requirements.txt
 
+#RUN virtualenv ${VIRTUAL_ENV}
+#RUN . ${VIRTUAL_ENV}/bin/activate && pip install -r app/requirements.txt
+RUN . ${VIRTUAL_ENV}/bin/activate
 EXPOSE 8501
 
 COPY run.sh /home/appuser
