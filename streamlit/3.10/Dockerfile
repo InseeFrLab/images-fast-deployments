@@ -26,4 +26,5 @@ RUN . ${VIRTUAL_ENV}/bin/activate
 EXPOSE 8501
 
 COPY run.sh /home/appuser
+RUN chmod +x /home/appuer/run.sh
 ENTRYPOINT ["./run.sh"]
